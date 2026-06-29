@@ -39,7 +39,7 @@ function App() {
 
   if (!selectedPR) return;
 
-  fetch(`http://127.0.0.1:8000/prs/${selectedPR}`)
+  fetch(`https://armorgit-backend.onrender.com/prs/${selectedPR}`)
     .then(res => res.json())
     .then(data => {
       setCurrentPR(data);
@@ -85,7 +85,7 @@ useEffect(() => {
 
 useEffect(() => {
 
-  fetch("http://127.0.0.1:8000/prs")
+  fetch("https://armorgit-backend.onrender.com/prs")
     .then(res => res.json())
     .then(data => {
 
@@ -144,7 +144,7 @@ for (const file of currentPR.files) {
 
   
   try {
-    const response = await fetch("http://127.0.0.1:8000/review", {
+    const response = await fetch("https://armorgit-backend.onrender.com/review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
