@@ -73,7 +73,7 @@ def root():
 @app.get("/prs")
 def get_prs():
 
-    pulls = repo.get_pulls(state="open")
+    pulls = repo.get_pulls(state="all")
 
     prs = []
 
